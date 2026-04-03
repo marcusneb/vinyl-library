@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.assigment1.VinylListController"
+      spacing="10" style="-fx-padding: 15;">
+
+    <Label text="Vinyl Library" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="vinylTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="titleColumn"       text="Title"        prefWidth="200"/>
+            <TableColumn fx:id="artistColumn"      text="Artist"       prefWidth="150"/>
+            <TableColumn fx:id="releaseYearColumn" text="Year"         prefWidth="80"/>
+            <TableColumn fx:id="stateColumn"       text="State"        prefWidth="180"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button fx:id="reserveButton" text="Reserve" onAction="#onReserve"/>
+        <Button fx:id="borrowButton"  text="Borrow"  onAction="#onBorrow"/>
+        <Button fx:id="returnButton"  text="Return"  onAction="#onReturn"/>
+        <Button fx:id="removeButton"  text="Remove"  onAction="#onRemove"/>
+    </HBox>
+
+</VBox>
